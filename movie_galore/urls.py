@@ -20,4 +20,6 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('movie.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
+    path('auth/',include('authentication.urls')),
 ]
