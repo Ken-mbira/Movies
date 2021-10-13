@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 
 def login_user(request):
     """This will handle the user registration
@@ -17,6 +17,7 @@ def login_user(request):
 
         if user is not None:
             login(request,user)
+            messages.success(request,f'Congratulations {username}, you were logged in successfully!')
             return redirect('index')
 
         else:
@@ -25,3 +26,13 @@ def login_user(request):
 
     else:
         return render(request,'authenticate/login.html')
+
+def logout_user(request):
+    """This will logout a user
+
+    Args:
+        request ([type]): [description]
+    """
+    logout(request)
+    messages.success(request,"You were logged out successfully")
+    return redirect('index')
