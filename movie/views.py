@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    """This will render the home page
+
+    Args:
+        request ([type]): [description]
+    """
+    return render(request,'movie/index.html')
