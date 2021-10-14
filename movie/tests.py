@@ -12,7 +12,7 @@ class TestMovie(TestCase):
         """
         This will run before the tests do
         """
-        self.movie = Movie(1,'Movie',"This is the best movie to be created","link to image","link to trailer")
+        self.movie = Movie(1,'Movie',"This is the best movie to be created","link to image")
 
     def test_movie_instance(self):
         """This tests whether a movie instance is of the class Movie
