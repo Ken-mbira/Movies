@@ -52,4 +52,10 @@ def movie_request(id):
     response = json.loads(serialized_data)
 
     id = id
-    title = response['original_title']  
+    title = response['original_title'] 
+    description = response['overview']
+    path = response['poster_path']
+    image_path = f'https://image.tmdb.org/t/p/original/{path}'
+    if path:
+        movie = Movie(id,title,description,image_path)
+        return movie

@@ -19,9 +19,10 @@
     <div class="container">
         <div class="row grid" data-masonry='{"percentPosition": true }'>
             {% for movie in movies %}
-            <div class="col-sm-3 col-xs-3 col-md-3">
-                <img class="img-thumbnail " src="{{movie.image_path}} ">
-                <p class="card-text" style="color: white;">{{movie.title}}</p>
+            <div class="col-sm-3 col-xs-3 col-md-3" style="margin-bottom:5px">
+                <a href="{% url 'movie' movie.id %}" style="text-decoration:none; color:black">
+                    <img class="img-thumbnail " src="{{movie.image_path}} ">
+                </a>
             </div>
             {% endfor %}
         </div>
