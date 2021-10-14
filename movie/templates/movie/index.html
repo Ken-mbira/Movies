@@ -1,10 +1,16 @@
 {% extends 'base.html' %}{% load static %}{% block content %}
 <div class="container-fluid">
-    <div class="row">
+    <div style="display:flex;justify-content:center;background-color:black">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{movies.0.image_path}}" class="img-fluid" width="500px" alt="...">
+                </div>
                 <div class="carousel-item">
-                    <img src="{% static 'images/photo1.jpg' %}" width="400px" class="img-fluid" alt="...">
+                    <img src="{{movies.1.image_path}}" class="img-fluid" width="500px" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{movies.2.image_path}}" class="img-fluid" width="500px" alt="...">
                 </div>
             </div>
         </div>
