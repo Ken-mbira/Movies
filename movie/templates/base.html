@@ -17,7 +17,10 @@
         <strong>{{message}}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    {% endfor %} {% endif %} {% block content %} {% endblock %}{% block scripts %} {% bootstrap_javascript %} {% endblock %}
+    {% endfor %} {% endif %} {% block content %} {% endblock %}{% block scripts %} {% bootstrap_javascript %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    {% endblock %}
 </body>
 
 </html>
