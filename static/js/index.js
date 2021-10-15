@@ -5,7 +5,7 @@ $(document).ready(function() {
             msnry.layout();
         }, 100);
     });
-
-    var myModal = new bootstrap.Modal(document.getElementById('myModal2'))
-    myModal.show();
 })
+
+var myModal = new bootstrap.Modal(document.getElementById('myModal2'))
+myModal.show();
